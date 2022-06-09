@@ -56,5 +56,5 @@ function addListAfterKeypress(event) {
   }
 }
 
-addButton.addEventListener('click', createListElement);
+addButton.addEventListener('click', addListAfterClick);
 input.addEventListener('keypress', addListAfterKeypress);
