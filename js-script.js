@@ -24,7 +24,7 @@ function createListElement() {
   input.value = ''; //Reset text input field
 
   function crossOut() {
-    newLiElement.classList.toggle('done');
+    newLiElement.classList.toggle('todos--done');
   }
 
   // Add Click Event Listener to itself
@@ -37,7 +37,7 @@ function createListElement() {
   newLiElement.appendChild(deleteBtn);
 
   function deleteListItem() {
-    newLiElement.classList.add('delete');
+    newLiElement.classList.add('todos--delete');
   }
 
   // Add Click Event Listener to deleteBtn

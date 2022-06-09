@@ -92,11 +92,11 @@ li > button {
   font-weight: 800;
 }
 
-.done {
+.todos--done {
   background: #51df70 !important;
   color: #00891e;
 }
 
-.delete {
+.todos--delete {
   display: none;
 }
