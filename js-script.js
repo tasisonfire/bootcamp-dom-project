@@ -15,26 +15,33 @@ function listLength() {
 }
 
 function createListElement() {
-  // step1: create new li element
-  // const newLiElement = document.createElement('li');
+  const newLiElement = document.createElement('li');
 
-  // step2: get input value
+  const inputValue = input.value;
 
-  // step3: append element to ul and then reset input field
+  const valueNode = document.createTextNode(inputValue);
+  newLiElement.appendChild(valueNode);
+
+  inputValue.value = '';
 
   function crossOut() {
     newLiElement.classList.toggle('todos--done');
   }
 
-  // step4: add click event listener to new li
+  ul.appendChild(newLiElement);
+  newLiElement.addEventListener('click', crossOut);
 
-  // step5: create delete button and append intp new li
+  const deleteBtn = document.createElement('button');
+  const btnText = document.createTextNode('X');
+
+  deleteBtn.appendChild(btnText);
+  newLiElement.appendChild(deleteBtn);
 
   function deleteListItem() {
     newLiElement.classList.add('todos--delete');
   }
 
-  // step6: add click event listener to delete button
+  deleteBtn.addEventListener('click', deleteListItem);
 }
 
 function addListAfterClick() {
@@ -49,5 +56,5 @@ function addListAfterKeypress(event) {
   }
 }
 
-addButton.addEventListener('click', addListAfterClick);
+addButton.addEventListener('click', createListElement);
 input.addEventListener('keypress', addListAfterKeypress);
