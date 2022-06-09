@@ -23,7 +23,7 @@ function createListElement() {
   // step3: append element to ul and then reset input field
 
   function crossOut() {
-    newLiElement.classList.toggle('done');
+    newLiElement.classList.toggle('todos--done');
   }
 
   // step4: add click event listener to new li
@@ -31,7 +31,7 @@ function createListElement() {
   // step5: create delete button and append intp new li
 
   function deleteListItem() {
-    newLiElement.classList.add('delete');
+    newLiElement.classList.add('todos--delete');
   }
 
   // step6: add click event listener to delete button
