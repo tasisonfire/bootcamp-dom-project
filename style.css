@@ -1,7 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: #04a1bf;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   max-width: 800px;
   margin: auto;
 }
